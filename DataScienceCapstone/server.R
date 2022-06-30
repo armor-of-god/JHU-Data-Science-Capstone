@@ -14,9 +14,9 @@ mesg <<- ""
 Predict <- function(x) {
     clean <- removeNumbers(removePunctuation(tolower(x)))
     user_input <- strsplit(clean, " ")[[1]]
-
-# PREDICT NEXT TERM - STARTING WITH 4-GRAM, THEN 3-GRAM IF UNSAT, THEN 2-GRAM IF UNSAT
-
+    
+    # PREDICT NEXT TERM - STARTING WITH 4-GRAM, THEN 3-GRAM IF UNSAT, THEN 2-GRAM IF UNSAT
+    
     if (length(user_input)>= 3) {
         user_input <- tail(user_input,3)
         if (identical(character(0),head(quadgram[quadgram$unigram == user_input[1] & quadgram$bigram == user_input[2] & quadgram$trigram == user_input[3], 4],1))){
@@ -37,7 +37,6 @@ Predict <- function(x) {
         else {mesg <<- "The next word is predicted using a 2-gram."; head(bigram[bigram$unigram == user_input[1],2],1)}
     }
 }
-
 
 shinyServer(function(input, output) {
     output$prediction <- renderPrint({

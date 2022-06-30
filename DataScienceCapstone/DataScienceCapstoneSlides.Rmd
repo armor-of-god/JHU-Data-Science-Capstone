@@ -1,0 +1,45 @@
+---
+title: "Data Science Capstone Project"
+author: "Dr. Daniel Veit"
+date: "6/29/2022"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Objective
+
+The goal of this exercise is to create a product to highlight the prediction algorithm that you have built and to provide an interface that can be accessed by others. For this project you must submit:
+
+1. A Shiny app that takes as input a phrase (multiple words) in a text box input and outputs a prediction of the next word.
+
+2. A slide deck consisting of no more than 5 slides created with R Studio Presenter (https://support.rstudio.com/hc/en-us/articles/200486468-Authoring-R-Presentations) pitching your algorithm and app as if you were presenting to your boss or an investor.
+
+## Methodology / Algorithm
+### Getting & Cleaning the Data
+
+- Load the n-gram data sets, which are Term Document Matrices generated from the corpus sampled from the three sources (blogs,twitter and news) which is then merged into one.
+- Clean the user input by by conversion to lowercase, strip white space, and removing punctuation and numbers.
+
+### Applying the Algorithm
+
+- The predicted word is obtained from the n-grams matrices, comparing it with tokenize frequency of 2, 3 and 4 grams sequences.
+- The agorithm verifies if highest-order n-gram (n=4) can be located. If unsuccessful, the algorithm resorts to a lower-order n-grams (n=3,2).
+
+## How to Use
+
+The app can be found at: [Shiny App](https://armor-of-god.shinyapps.io/DataScienceCapstone/)
+
+Once the app is loaded:
+
+1. Upon initial load up of the application, **"NULL"** will be displayed at the "Prediction for Next Word."
+2. Enter a partially complete sentence on the left-hand panel to initiate the next word prediction.
+
+## Results / Additional Info
+1. Next word predicted is shown in the "Prediction for Next Word" textbox.
+2. Additional information is provided on which n-gram was performed to complete the prediction.
+
+The source codes for ui.R and server.R files are also available on the [GitHub repo](https://github.com/armor-of-god/JHU-Data-Science-Capstone/tree/main/DataScienceCapstone)
+

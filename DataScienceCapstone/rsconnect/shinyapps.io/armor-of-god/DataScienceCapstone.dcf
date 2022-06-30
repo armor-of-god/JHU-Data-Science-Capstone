@@ -1,0 +1,13 @@
+name: DataScienceCapstone
+title: DataScienceCapstone
+username:
+account: armor-of-god
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 6572806
+bundleId: 6056695
+url: https://armor-of-god.shinyapps.io/DataScienceCapstone/
+when: 1656563360.13123
+lastSyncTime: 1656563360.13223
+asMultiple: FALSE
+asStatic: FALSE

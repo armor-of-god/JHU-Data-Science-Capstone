@@ -1,15 +1,15 @@
-This application is developed as part of the requirement for the **Coursera Data Science Capstone Course**. The goal of the project is to build a predictive text model combined with a shiny app UI that will predict the next word as the user types a sentence similar to the way most smart phone keyboards are implemented today using the technology of Swiftkey.
+This application is the capstone requirement for the **Coursera Data Science Course**. The objective of this project is to develope a predictive language model using a shiny appplication to predict the next word of user input, similar to how a smart phone keyboards function today using the technology of Swiftkey.
 
-### Steps
-1. Upon initial load up of the application, **"NULL"** will be displayed at the Predicted Next Word textbox.
-2. User may then enter a partially complete sentence to begin the next word prediction.
+### How to Use
+1. Upon initial load up of the application, **"NULL"** will be displayed at the "Prediction for Next Word."
+2. Enter a partially complete sentence on the left-hand panel to initiate the next word prediction.
 
 
 ### Results
-1. Next word predicted is shown at the Predicted Next Word textbox.
-2. Information on the n-gram backoff algorithm used to predict is shown as indication.
+1. Next word predicted is shown in the "Prediction for Next Word" textbox.
+2. Additional information is provided on which n-gram was performed to complete the prediction.
 
 #### Note:
-The source codes for ui.R and server.R files are also available on the [GitHub repo](https://github.com/sriharshams/coursera-data-science-capstone)
+The source codes for ui.R and server.R files are also available on the [GitHub repo](https://github.com/armor-of-god/JHU-Data-Science-Capstone/tree/main/DataScienceCapstone)
 
-Presentation Slide decks are available on the [RPubs page](http://rpubs.com/sriharshams/capstone)
+Presentation Slide decks are available on the [RPubs page](https://rpubs.com/dveit84/920203)
